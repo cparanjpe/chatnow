@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.formContainer{
+    background: linear-gradient(270deg, #4600a6, #3e6db0, #4361bf, #300d6c, #9d1c82);
+    background-size: 1000% 1000%;
+	animation: gradient 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.formWrapper{
+    height:auto;
+    min-width: 27%;
+    padding: 3% 5%;
+    background-color: rgba(0, 0, 0, 0.596);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    align-items: center;
+    color:white;
+    border: 3px dashed #afaaff;;
+}
+.formWrapper>form{
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;    
+}
+.formWrapper .logo{
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 1.45px;
+}
+.formWrapper .logo:hover{
+    color:rgb(248, 165, 179);
+}
+.formWrapper .title{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.formWrapper>form>input{
+    width: 100%;
+    line-height: 1.75;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+}
+.formWrapper>form>label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+.formWrapper>form>button{
+    width: 60%;
+    line-height: 2;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.formWrapper>form>button:hover{
+    background-color: rgb(238, 81, 81);
+    color: black;
+    font-weight: 600;
+}
+/*login and register page styling complete*/
+/* Now stlye actual chat layout */
+
+.home{
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 65%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+}
+.sidebar{
+    flex:1;
+    border-right: 1px solid darkblue;
+    background-color: #3c2147;
+}
+.chat{
+    flex:2;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #1d0431;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    color: white;
+}
+.navbar .logo{
+    font-weight: bold;
+}
+.navbar .user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.navbar .user>img{
+    background-color: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+.navbar .user>button{
+    background-color:#5d5b8d;
+    color: #fff;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+}
+.search{
+    border-bottom: 1px solid gray;
+}
+.userChat{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+}
+.userChat:hover{
+    background-color: #1d0431;
+}
+.userChat>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.search .searchForm{
+    padding:10px;
+}
+.search .searchForm>input{
+    background-color: transparent;
+    border:none;
+    color: white;
+    outline: none;
+}
+.chats .userChatInfo>span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.chats .userChat >p{
+    margin: 0;
+    padding: 0;
+    font-size: 5px;
+    color: lightgray;
+}
+
+/* now styling vhat section */
+.chat .chatInfo{
+    height: 50px ;
+    background-color: #5d5b8d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: lightgray;
+}
+.chat .chatIcons{
+    display: flex;
+    gap: 10px;
+}
+.chat .chatIcons>img{
+    height: 24px;
+    cursor: pointer;
+}
+
+/* now starting main message section of personal chat */
+
+.chat .messages{
+    background-color: #ddddf7;
+    padding: 10px;
+    height: calc(100% - 160px); /* height of upper bar=20(pad top+bottom)+50 | height of input bar=20(pad top+bottom)+50 | padding(t+b) of messages itself is 20 | addn is 70+70+20=160 */
+    overflow-y: scroll;
+}
+.chat .input{
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chat .input .send{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.chat .input>input{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: large;
+    color: #2f2d52;
+}
+.chat .input .send>img, .send>label>img{
+    height: 24px;
+    cursor: pointer; 
+}
+.chat .input .send>button{
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: #8da4f1 ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chat .input .send>button:hover{
+    background-color: #4870f3;
+    font-weight: 600;
+}
+
+/* now stying actual messages btwm users  */
+.chat .messages .message{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.chat .messages .message .messageInfo>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.chat .messages .message .messageContent>img{
+    width: 50%;
+
+}
+.chat .messages .message .messageInfo{
+    display: flex;
+    flex-direction: column;
+    color:gray;
+    font-weight: 300;
+
+}
+.chat .messages .message .messageContent{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat .messages .message .messageContent>p{
+    max-width: max-content;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px 10px 10px 10px;
+
+}
+.chat .messages  .owner {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.chat .messages  .owner .messageContent>p{
+    max-width: max-content;
+    background-color: #8da4f1;
+    color: white;
+    border-radius: 10px 0px 10px 10px;
+}
+.chat .messages .owner .messageContent{
+    align-items: flex-end;
+}
